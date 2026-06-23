@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-chaos-engineering",
-  "version": "1.0.0",
-  "description": "Chaos Engineering Runner — Gremlin/Chaos Mesh/Litmus integration for controlled chaos experiments with resilience reporting",
+  "version": "1.0.1",
+  "description": "Chaos Engineering Runner \u2014 Gremlin/Chaos Mesh/Litmus integration for controlled chaos experiments with resilience reporting",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,9 +9,16 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-chaos-engineering",
   "homepage": "https://cortexprism.io/marketplace/plugins/chaos-engineering",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
-    { "name": "chaos_design_experiment", "description": "Design a chaos experiment", "params": [] },
+    {
+      "name": "chaos_design_experiment",
+      "description": "Design a chaos experiment",
+      "params": []
+    },
     {
       "name": "chaos_run_experiment",
       "description": "Execute chaos experiment with safety gates",
@@ -22,9 +29,20 @@
       "description": "Get experiment results and resilience score",
       "params": []
     },
-    { "name": "chaos_list_experiments", "description": "List past chaos experiments", "params": [] }
+    {
+      "name": "chaos_list_experiments",
+      "description": "List past chaos experiments",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
